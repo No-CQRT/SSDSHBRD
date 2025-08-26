@@ -3,7 +3,7 @@
 A really Super Simple Dashboard; monitor items via MQTT websocket directly from browser
 
 ## Features:
-- Single static HTML page: use the [GitHub page ](https://no-cqrt.github.io/SSDSHBRD/) or host everywhere you like it.
+- Static HTML pages: use the [GitHub page ](https://no-cqrt.github.io/SSDSHBRD/) or host everywhere you like it.
 - No Database required. Parameters are stored in Browser's LocalStorage
 - Export / import config via TXT file or copy and paste
 - Display values as String or Boolean (red/green)
