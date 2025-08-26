@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dashboard Configuration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container my-5">
+        <h1 class="text-center mb-4"> MQTT Dashboard Configuration</h1>
+        
+        <form id="configForm">
+            <div class="mb-3">
+                <label for="dashboardTitle" class="form-label">Dashboard Title</label>
+                <input type="text" class="form-control" id="dashboardTitle">
+            </div>
+            <div class="mb-3">
+                <label for="mqttServer" class="form-label">MQTT Server Address (websocket)</label>
+                <input type="text" class="form-control" id="mqttServer">
+            </div>
+            <div class="mb-3">
+                <label for="updateInterval" class="form-label">update (ms)</label>
+                <input type="number" class="form-control" id="updateInterval">
+            </div>
+            <div class="mb-3">
+                <label for="topicsConfig" class="form-label"> Topic Configuration (JSON)</label>
+                <textarea class="form-control" id="topicsConfig" rows="10"></textarea>
+                <div class="form-text">
+                    Insert a JSON Array of objects, like this example:<br>
+                    `[{"id":1,"topic":"house/temp","text":"Temperatura","type":"string"}, {"id":2,"topic":"house/light","text":"Luce","type":"boolean"}]`
+                </div>
+            </div>
+            <button type="button" id="saveConfig" class="btn btn-success me-2">Save and close</button>
+            <button type="button" id="importConfig" class="btn btn-info me-2">Import JSON TXT</button>
+            <button type="button" id="exportConfig" class="btn btn-warning">Export JSON TXT</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
